@@ -12,6 +12,7 @@
         />
     </head>
     <body>
+        <!-- header start -->
         <header
             class="sticky top-0 z-50 grid grid-cols-3 gap-4 pt-5 pb-3 px-5 bg-white shadow-lg"
         >
@@ -73,137 +74,149 @@
                 </div>
             </div>
         </header>
+        <!-- header end -->
 
-        <main>
-            <section class="main container w-full h-screen md:mt-1">
-                <div class="md:flex md:justify-between md:mx-auto">
-                    <div class="img-main h-full object-cover md:w-4/5">
-                        <img
-                            src="dist/image/shoes.webp"
-                            alt="shoes.webp"
-                            class="h-[600px] md:h-full"
-                        />
-                    </div>
+        <!-- main start -->
+        <main class="w-screen min-h-full">
+            <!-- hero section start -->
+
+            <section
+                class="w-full max-h-screen min-w-[500px] sm:min-w-[640px] md:min-w-max lg:min-w-max xl:min-w-max font-Primary mt-1"
+            >
+                <div class="hero-img h-full lg:flex lg:flex-row lg:gap-2">
+                    <img
+                        src="dist/image/shoes.webp"
+                        alt="shoes.webp"
+                        class="h-[565px] sm:h-full lg:h-[600px] w-full lg:w-3/5 xl:w-4/5 object-cover"
+                    />
                     <div
-                        class="-mt-52 text-white p-5 md:-mt-0 md:text-black pt-20"
+                        class="text-white lg:text-black p-5 -mt-36 sm:-mt-52 lg:mt-0 lg:py-36 lg:w-2/5 xl:w-1/5"
                     >
-                        <h1 class="md:text-base md:font-semibold">
+                        <h2 class="text-base font-medium">
                             LT 01 Essence White
-                        </h1>
-                        <p class="hidden md:block text-sm tracking-wide my-3">
+                        </h2>
+
+                        <p
+                            class="text-2xl font-light sm:py-2 md:tracking-widest"
+                        >
+                            Our style never
+                            <span class="block"> changes. It evolves. </span>
+                        </p>
+                        <p
+                            class="hidden md:block md:py-2 text-base md:tracking-widest"
+                        >
                             A thick layer of style and
-                            <span class="block">
+                            <span class="lg:block">
                                 quality, a thin layer of logos.
                             </span>
                         </p>
-                        <p
-                            class="text-2xl my-2 md:text-lg md:leading-8 md:text-slate-600 md:font-normal md:tracking-wide"
-                        >
-                            Our style never changes.
-                            <span class="block"> changes. It evolves </span>
-                        </p>
                         <a
                             href="#"
-                            class="md:block md:mt-5 underline hover:no-underline decoration-slate-700 text-sm py-3"
+                            class="w-fit border-b-2 border-white lg:border-black hover:border-none md:tracking-widest"
                             >Shop Now</a
                         >
                     </div>
                 </div>
+                <div class="hero-title"></div>
             </section>
-            <section
-                class="container w-full h-screen -mt-32 md:my-24 md:mx-auto"
-            >
-                <div class="carousel md:flex md:justify-evenly">
-                    <div class="first-image p-3 rounded-md">
-                        <img src="dist/image/packing.webp" alt="packing.webp" />
-                        <div class="image-title mt-2">
-                            <h3 class="text-base font-medium">
-                                Modular Packaging
-                            </h3>
-                            <p class="text-sm text-slate-600">
-                                Unboxing like never before
-                            </p>
-                            <a
-                                href="#"
-                                class="underline decoration-slate-800 hover:no-underline mt-5 block"
-                                >Read Story</a
-                            >
-                        </div>
 
-                        <div class="image flex mt-5">
-                            <div class="hidden second-images p-2">
-                                <img
-                                    src="dist/image/made's.webp"
-                                    alt="made's.webp"
-                                />
-                                <h3 class="text-base font-medium">
-                                    How it's made
-                                </h3>
-                                <p class="text-sm text-slate-600">
-                                    We do it with grace test
+            <!-- hero section end -->
+
+            <!-- section 2 start -->
+            <section
+                class="w-full max-h-screen mt-10 sm:mt-20 mx-auto max-w-[500px] sm:min-w-[640px] md:min-w-max lg:max-w-screen-lg xl:max-w-screen-xl"
+            >
+                <div class="min-w-full px-4 md:hidden">
+                    <img
+                        src="dist/image/packing.webp"
+                        alt="packing.webp"
+                        class="rounded-lg sm:w-full"
+                    />
+
+                    <h2 class="mt-5 text-base font-semibold">
+                        Modular Packaging
+                    </h2>
+                    <p class="text-sm my-3">Unboxing like never before</p>
+                    <a
+                        href="#"
+                        class="w-fit text-sm border-b-2 border-b-black hover:border-none"
+                        >Read Story</a
+                    >
+                </div>
+
+                <div class="min-w-full my-10 md:mt-36 md:max-w-3xl md:h-full">
+                    <div
+                        class="flex flex-row lg:justify-evenly gap-3 mx-5 lg:gap-1"
+                    >
+                        <div
+                            class="hidden md:block md:w-60 lg:w-1/3 lg:flex lg:flex-row lg:items-center"
+                        >
+                            <img
+                                src="dist/image/packing.webp"
+                                alt="packing.webp"
+                                class="rounded-lg sm:w-full lg:w-44"
+                            />
+
+                            <div class="lg:block lg:ml-2">
+                                <h2 class="text-base mt-3 font-medium">
+                                    Modular Packaging
+                                </h2>
+                                <p class="lg:my-3">
+                                    Unboxing like never before
                                 </p>
                                 <a
                                     href="#"
-                                    class="underline decoration-slate-800 hover:no-underline mt-5 block"
+                                    class="w-fit text-sm border-b-2 border-b-black hover:border-none my-5"
+                                    >Read Story</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="md:w-60 lg:w-1/3 lg:flex lg:flex-row lg:items-center"
+                        >
+                            <img
+                                src="dist/image/made's.webp"
+                                alt="made's.webp"
+                                class="rounded-lg lg:w-44"
+                            />
+                            <div class="lg:block lg:px-3">
+                                <h2 class="text-base mt-3 font-medium">
+                                    How it's made
+                                </h2>
+                                <p class="lg:my-3">We do it with grace</p>
+                                <a
+                                    href="#"
+                                    class="w-fit text-sm border-b-2 border-b-black hover:border-none my-5"
+                                    >Read Story</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="md:w-60 lg:w-1/3 lg:flex lg:flex-row lg:items-center"
+                        >
+                            <img
+                                src="dist/image/we are.webp"
+                                alt="we are.webp"
+                                class="rounded-lg lg:w-44"
+                            />
+                            <div class="lg:block lg:px-3">
+                                <h2 class="text-sm mt-3 font-medium">
+                                    Designed in Amsterdam
+                                </h2>
+                                <p class="lg:my-3">Who we are</p>
+                                <a
+                                    href="#"
+                                    class="w-fit text-sm border-b-2 border-b-black hover:border-none my-5"
                                     >Read Story</a
                                 >
                             </div>
                         </div>
                     </div>
-                    <div class="image flex -mt-5 md:mt-0 px-4">
-                        <div class="second-images p-2">
-                            <img
-                                src="dist/image/made's.webp"
-                                alt="made's.webp"
-                            />
-                            <h3 class="text-base font-medium">How it's made</h3>
-                            <p class="text-sm text-slate-600">
-                                We do it with grace
-                            </p>
-                            <a
-                                href="#"
-                                class="underline decoration-slate-800 hover:no-underline mt-5 block"
-                                >Read Story</a
-                            >
-                        </div>
-                        <div class="third-images p-2 sm:hidden">
-                            <img
-                                src="dist/image/we are.webp"
-                                alt="we are.webp"
-                            />
-                            <h3 class="text-sm font-medium">
-                                Designed in Amsterdam
-                            </h3>
-                            <p class="text-sm text-slate-600">Who we are</p>
-                            <a
-                                href="#"
-                                class="underline decoration-slate-800 hover:no-underline mt-5 block"
-                                >Read Story</a
-                            >
-                        </div>
-                    </div>
-                    <div class="third-image mt-5 hidden sm:inline md:mt-0">
-                        <div class="third-images p-2">
-                            <img
-                                src="dist/image/we are.webp"
-                                alt="we are.webp"
-                            />
-                            <h3 class="text-sm font-medium">
-                                Designed in Amsterdam
-                            </h3>
-                            <p class="text-sm text-slate-600">Who we are</p>
-                            <a
-                                href="#"
-                                class="underline decoration-slate-800 hover:no-underline mt-5 block"
-                                >Read Story</a
-                            >
-                        </div>
-                    </div>
                 </div>
             </section>
-            <!-- carousel start -->
-            <!-- carousel END -->
+            <!-- section 2 end -->
         </main>
+        <!-- main end -->
 
         <!-- script for flowbite -->
         <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
