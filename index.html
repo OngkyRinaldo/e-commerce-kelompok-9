@@ -158,7 +158,7 @@
 
             <!-- section 2 start -->
             <section
-                class="w-full max-h-screen mt-10 sm:mt-20 mx-auto max-w-[500px] sm:min-w-[640px] md:min-w-max lg:max-w-screen-lg xl:max-w-screen-xl"
+                class="container max-h-screen mt-10 sm:mt-20 mx-auto max-w-[500px] sm:min-w-[640px] md:min-w-max lg:max-w-screen-lg xl:max-w-screen-xl"
             >
                 <div class="min-w-full px-4 md:hidden">
                     <img
@@ -249,6 +249,120 @@
                 </div>
             </section>
             <!-- section 2 end -->
+
+            <!-- Product List start -->
+
+            <section class="container max-h-screen mx-auto mt-36">
+                <div class="px-4">
+                    <h2 class="font-medium">Product List</h2>
+                </div>
+
+                <div
+                    id="controls-carousel"
+                    class="relative w-full my-8"
+                    data-carousel="static"
+                >
+                    <!-- Carousel wrapper -->
+                    <div
+                        class="relative h-56 overflow-hidden rounded-lg md:h-96"
+                    >
+                        <!-- Item 1 -->
+                        <div
+                            class="hidden duration-700 ease-in-out"
+                            data-carousel-item
+                        >
+                            <img
+                                src="dist/image/carousel/contoh-gambar.jpg"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="..."
+                            />
+                        </div>
+                        <!-- Item 2 -->
+                        <div
+                            class="hidden duration-700 ease-in-out"
+                            data-carousel-item="active"
+                        >
+                            <img
+                                src="dist/image/made's.webp"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="..."
+                            />
+                        </div>
+                        <!-- Item 3 -->
+                        <div
+                            class="hidden duration-700 ease-in-out"
+                            data-carousel-item
+                        >
+                            <img
+                                src="dist/image/shoes.webp"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <!-- Slider controls -->
+                    <button
+                        type="button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev
+                    >
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                        >
+                            <svg
+                                aria-hidden="true"
+                                class="w-6 h-6 text-white dark:text-gray-800"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 19l-7-7 7-7"
+                                ></path>
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button
+                        type="button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next
+                    >
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                        >
+                            <svg
+                                aria-hidden="true"
+                                class="w-6 h-6 text-white dark:text-gray-800"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                ></path>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="text-end cursor-pointer px-4">
+                    <a
+                        href="#"
+                        class="block text-lg font-bold hover:text-slate-700 hover:underline"
+                        >More Products
+                    </a>
+                </div>
+            </section>
+            <!-- Product List end -->
         </main>
         <!-- main end -->
 
