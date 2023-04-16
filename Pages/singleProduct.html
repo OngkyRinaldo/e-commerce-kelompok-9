@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>e-commerce</title>
-        <link href="dist/output.css" rel="stylesheet" />
+        <link href="../dist/output.css" rel="stylesheet" />
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@300;500&display=swap"
             rel="stylesheet"
@@ -25,7 +25,7 @@
                 >
                     <a href="index.html" class="flex items-center">
                         <img
-                            src="src/img/Home/etq-amsterdam-logo-svg-vector.png"
+                            src="../src/img/Home/etq-amsterdam-logo-svg-vector.png"
                             class="h-8 mr-3"
                             alt="Logo"
                         />
@@ -61,14 +61,14 @@
                         >
                             <li>
                                 <a
-                                    href="index.html"
+                                    href="../index.html"
                                     class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                     >Home</a
                                 >
                             </li>
                             <li>
                                 <a
-                                    href="Pages/allProducts.html"
+                                    href="AllProducts.html"
                                     class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                                     >Shop All</a
                                 >
@@ -116,213 +116,18 @@
         <!-- header end -->
 
         <!-- main start -->
-        <main class="w-screen min-h-full">
-            <!-- hero section start -->
-
-            <section
-                class="w-full max-h-screen min-w-[500px] sm:min-w-[640px] md:min-w-max lg:min-w-max xl:min-w-max font-Primary mt-1"
-            >
-                <div class="hero-img h-full lg:flex lg:flex-row lg:gap-2">
-                    <img
-                        src="src/img/Home/shoes.webp"
-                        alt="shoes.webp"
-                        class="h-[565px] sm:h-full lg:h-[600px] w-full lg:w-3/5 xl:w-4/5 object-cover"
-                    />
-                    <div
-                        class="text-white lg:text-black p-5 -mt-36 sm:-mt-52 lg:mt-0 lg:py-36 lg:w-2/5 xl:w-1/5"
-                    >
-                        <h2 class="text-base font-medium">
-                            LT 01 Essence White
-                        </h2>
-
-                        <p
-                            class="text-2xl font-light sm:py-2 md:tracking-widest"
-                        >
-                            Our style never
-                            <span class="block"> changes. It evolves. </span>
-                        </p>
-                        <p
-                            class="hidden md:block md:py-2 text-base md:tracking-widest"
-                        >
-                            A thick layer of style and
-                            <span class="lg:block">
-                                quality, a thin layer of logos.
-                            </span>
-                        </p>
-                        <a
-                            href="#"
-                            class="w-fit border-b-2 border-white lg:border-black hover:border-none md:tracking-widest"
-                            >Shop Now</a
-                        >
-                    </div>
-                </div>
-                <div class="hero-title"></div>
-            </section>
-
-            <!-- hero section end -->
-
-            <!-- Product List start -->
-            <section
-                class="container max-h-screen mx-auto mt-10 sm:mt-16 md:mt-24 lg:mt-16 px-4"
-            >
-                <div class="px-4">
-                    <h2 class="text-2xl font-semibold">Product List</h2>
-                </div>
-
-                <div
-                    id="controls-carousel"
-                    class="relative w-full my-8"
-                    data-carousel="static"
-                >
-                    <!-- Carousel wrapper -->
-                    <div
-                        class="relative h-56 overflow-hidden rounded-lg md:h-96"
-                    >
-                        <!-- Item 1 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item
-                        >
-                            <img
-                                src="src/img/Home/carousel/contoh-gambar.jpg"
-                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                alt="..."
-                            />
-                        </div>
-                        <!-- Item 2 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item="active"
-                        >
-                            <img
-                                src="src/img/Home/carousel/made's.webp"
-                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                alt="..."
-                            />
-                        </div>
-                        <!-- Item 3 -->
-                        <div
-                            class="hidden duration-700 ease-in-out"
-                            data-carousel-item
-                        >
-                            <img
-                                src="src/img/Home/carousel/shoes.webp"
-                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                alt="..."
-                            />
-                        </div>
-                    </div>
-                    <!-- Slider controls -->
-                    <button
-                        type="button"
-                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-prev
-                    >
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                        >
-                            <svg
-                                aria-hidden="true"
-                                class="w-6 h-6 text-white dark:text-gray-800"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M15 19l-7-7 7-7"
-                                ></path>
-                            </svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button
-                        type="button"
-                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-next
-                    >
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-                        >
-                            <svg
-                                aria-hidden="true"
-                                class="w-6 h-6 text-white dark:text-gray-800"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                ></path>
-                            </svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
-                </div>
-                <div class="text-end cursor-pointer px-4">
-                    <a
-                        href="#"
-                        class="block text-lg font-bold hover:text-slate-700 hover:underline"
-                        >More Products
-                    </a>
-                </div>
-            </section>
-            <!-- Product List end -->
-
-            <!-- section 4 start -->
-
-            <section
-                class="container max-h-screen mx-auto mt-200 sm:mt-16 px-4 pb-30"
-            >
-                <div class="md:flex md:gap-4">
-                    <div class="md:w-1/2">
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0505/9044/9849/files/ETQ---Amsterdam---Gift-Card-0599_v3_2_1200x.jpg?v=1668095564"
-                            alt="gift card"
-                            class="rounded-lg shadow-lg md:h-full md:object-cover"
-                        />
-                        <h2
-                            class="text-xl font-semibold my-2 w-fit hover:border-b-2 hover:border-slate-600"
-                        >
-                            ETQ Gift Card
-                        </h2>
-                        <p class="text-sm text-slate-600">
-                            Give the give of choice
-                        </p>
-                    </div>
-                    <div class="mt-5 md:mt-0 md:w-1/2">
-                        <img
-                            src="https://cdn.shopify.com/s/files/1/0505/9044/9849/files/ETQ-OfficeOktober-0414_crob_220_b557e12e-a522-4654-b267-96e959e9a767_1200x.png?v=1678007584"
-                            alt="New in"
-                            class="rounded-lg shadow-lg md:h-full md:object-cover"
-                        />
-                        <h2
-                            class="text-xl font-semibold my-2 w-fit hover:border-b-2 hover:border-slate-600"
-                        >
-                            New In
-                        </h2>
-                        <p class="text-sm text-slate-600">
-                            Discover the latest additions.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- section 4 end -->
+        <main class="w-full min-h-full">
+            <div class="text-center">
+                <h1>All products Page</h1>
+                <p>rafli Priambudi pages</p>
+            </div>
         </main>
         <!-- main end -->
 
         <!-- footer -->
 
         <footer
-            class="bg-white container max-h-full mx-auto border-t border-black-300 mt-18 md:mt-28"
+            class="bg-white container max-h-full mx-auto border-t border-black-300 mt-18 md:mt-22"
         >
             <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 <div class="mx-auto w-full max-w-screen-xl">
@@ -339,7 +144,7 @@
                                 changes. It evolves. Continuously.
                                 <a
                                     class="hover:underline"
-                                    href="Pages/about.html"
+                                    href="about.html"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     >Read more</a
@@ -480,27 +285,27 @@
                         <div class="flex py-2">
                             <img
                                 class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
-                                src="/src/img/Footer/bca.png"
+                                src="../src/img/Footer/bca.png"
                                 alt="bca"
                             />
                             <img
                                 class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
-                                src="/src/img/Footer/bri.png"
+                                src="../src/img/Footer/bri.png"
                                 alt="bri"
                             />
                             <img
                                 class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
-                                src="/src/img/Footer/dana.png"
+                                src="../src/img/Footer/dana.png"
                                 alt="dana"
                             />
                             <img
                                 class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
-                                src="/src/img/Footer/ovo.png"
+                                src="../src/img/Footer/ovo.png"
                                 alt="ovo"
                             />
                             <img
                                 class="w-auto h-8 object-cover rounded-lg bg-slate-100 px-2 py-2 mr-2"
-                                src="/src/img/Footer/google-pay.png"
+                                src="../src/img/Footer/google-pay.png"
                                 alt="gpay"
                             />
                         </div>
@@ -565,7 +370,7 @@
         <!-- footer end -->
 
         <!-- script for flowbite -->
-        <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
+        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
         <!-- end script for flowbite -->
     </body>
 </html>
