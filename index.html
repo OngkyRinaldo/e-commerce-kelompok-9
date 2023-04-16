@@ -12,9 +12,9 @@
     />
   </head>
   <style>
-    /* * {
-      border: 1px solid rgb(221, 69, 175);
-    } */
+    * {
+      border: 1px solid rgb(157, 253, 145);
+    }
   </style>
   <body>
     <!-- header start -->
@@ -299,7 +299,7 @@
     <!-- footer -->
 
     <footer
-      class="bg-white container max-h-full mx-auto border-t border-black-300 sm:grid-cols-1 sm:mt-18 md:mt-28"
+      class="bg-white container max-h-full mx-auto border-t border-black-300 mt-18 md:mt-28"
     >
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div class="mx-auto w-full max-w-screen-xl">
@@ -315,7 +315,7 @@
                 colorways. Our style never changes. It evolves. Continuously.
                 <a
                   class="hover:underline"
-                  href="http://"
+                  href="about.html"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Read more</a
@@ -398,102 +398,114 @@
       <!-- batas about sampai info -->
       <div class="md:grid md:grid-cols-2 md:gap-4">
         <div class="mx-auto w-full max-w-screen-xl">
-          <div class="flex px-4 py-3">
-            <form class="">
-              <label for="langganan" class="text-sm p-0 m-0">
-                Join our newsletter.
-              </label>
-              <div class="flex">
-                <input
-                  id="langganan"
-                  class="border-slate-200 shadow rounded w-full block mt-2"
-                  type="text"
-                  placeholder="Enter your email"
-                />
-                <button
-                  type="button"
-                  class="bg-slate-200 font-semibold hover:uderline py-3 px-3 rounded-md mt-2 ml-4 border border-slate-600 hover:bg-slate-500"
+          <div class="grid grid-rows-2 px-4 py-3">
+            <div class="flex">
+              <form class="">
+                <label for="langganan" class="text-sm p-0 m-0">
+                  Join our newsletter.
+                </label>
+                <div class="flex">
+                  <input
+                    id="langganan"
+                    class="border-slate-200 shadow rounded w-full block mt-2"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                  <button
+                    type="button"
+                    class="bg-slate-200 font-semibold hover:uderline py-3 px-3 rounded-md mt-2 ml-4 border border-slate-600 hover:bg-slate-500"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="py-3">
+              <p class="text-slate-500 text-sm">
+                This site is protected by reCAPTCHA and the Google
+                <a class="hover:underline" href="http://">Privacy Policy </a>
+                and
+                <a class="hover:underline" href="http://"
+                  >Terms of Service apply.</a
                 >
-                  Submit
-                </button>
-              </div>
-            </form>
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="mx-auto w-full max-w-screen-xl md:grid">
-          <div class="flex px-3 py-2">
-            <img
-              class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2"
-              src="/src/img/bca.png"
-              alt="bca"
-            />
-            <img
-              class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2"
-              src="/src/img/bri.png"
-              alt="bri"
-            />
-            <img
-              class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2"
-              src="/src/img/dana.png"
-              alt="dana"
-            />
-            <img
-              class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2"
-              src="/src/img/ovo.png"
-              alt="ovo"
-            />
-          </div>
-          <div class="px-4 py-3">
-            <p class="text-sm text-slate-500">
-              <a class="hover:underline" href="#">Term and condition.</a>
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="grid grid-rows-2 px-3 py-2 lg:flex md:content-justify">
+            <div class="flex py-2">
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/bca.png"
+                alt="bca"
+              />
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/bri.png"
+                alt="bri"
+              />
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/dana.png"
+                alt="dana"
+              />
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/ovo.png"
+                alt="ovo"
+              />
+              <img
+                class="w-auto h-8 object-cover rounded-lg bg-slate-100 px-2 py-2 mr-2"
+                src="/src/img/google-pay.png"
+                alt="gpay"
+              />
+            </div>
+
+            <div class="py-3 border-t border-black-300">
+              <a class="text-sm text-slate-800 hover:underline" href="#"
+                >Term and condition.</a
+              >
               <br />
-              <span>
-                <a class="hover:underline" href="#">Privay statements.</a>
-              </span>
-            </p>
+              <a class="text-sm text-slate-800 hover:underline" href="#"
+                >Privay statements.</a
+              >
+            </div>
           </div>
         </div>
 
-        <div class="px-4 py-3">
-          <p class="text-slate-500 text-sm">
-            This site is protected by reCAPTCHA and the Google
-            <a class="hover:underline" href="http://">Privacy Policy </a> and
-            <a class="hover:underline" href="http://"
-              >Terms of Service apply.</a
-            >
-          </p>
-
-          <div class="py-5">
-            <select class="bg-slate-200 hover:uderline py-3 px-3 rounded-md">
-              <option disabled selected>Pilih Mata Uang</option>
-              <option>AUD - Dolar Australia</option>
-              <option>BGN - Lev Bulgaria</option>
-              <option>BRL - Real Brasil</option>
-              <option>CAD - Dolar Kanada</option>
-              <option>CHF - Franc Swiss</option>
-              <option>CNY - Yuan China</option>
-              <option>EUR - Euro</option>
-              <option>GBP - Poundsterling Inggris</option>
-              <option>HKD - Dolar Hong Kong</option>
-              <option>IDR - Rupiah Indonesia</option>
-              <option>INR - Rupee India</option>
-              <option>JPY - Yen Jepang</option>
-              <option>KRW - Won Korea Selatan</option>
-              <option>MXN - Peso Meksiko</option>
-              <option>MYR - Ringgit Malaysia</option>
-              <option>NZD - Dolar New Zealand</option>
-              <option>PHP - Peso Filipina</option>
-              <option>PLN - Zloty Polandia</option>
-              <option>RUB - Rubel Rusia</option>
-              <option>SEK - Krona Swedia</option>
-              <option>SGD - Dolar Singapura</option>
-              <option>THB - Baht Thailand</option>
-              <option>TRY - Lira Turki</option>
-              <option>USD - Dolar Amerika Serikat</option>
-              <option>ZAR - Rand Afrika Selatan</option>
-            </select>
-          </div>
+        <div
+          class="px-4 py-3 mb-12 flex justify-center md:block md:justify-start"
+        >
+          <select class="bg-slate-200 hover:uderline py-3 px-3 rounded-md">
+            <option disabled selected>Pilih Mata Uang</option>
+            <option>AUD - Dolar Australia</option>
+            <option>BGN - Lev Bulgaria</option>
+            <option>BRL - Real Brasil</option>
+            <option>CAD - Dolar Kanada</option>
+            <option>CHF - Franc Swiss</option>
+            <option>CNY - Yuan China</option>
+            <option>EUR - Euro</option>
+            <option>GBP - Poundsterling Inggris</option>
+            <option>HKD - Dolar Hong Kong</option>
+            <option>IDR - Rupiah Indonesia</option>
+            <option>INR - Rupee India</option>
+            <option>JPY - Yen Jepang</option>
+            <option>KRW - Won Korea Selatan</option>
+            <option>MXN - Peso Meksiko</option>
+            <option>MYR - Ringgit Malaysia</option>
+            <option>NZD - Dolar New Zealand</option>
+            <option>PHP - Peso Filipina</option>
+            <option>PLN - Zloty Polandia</option>
+            <option>RUB - Rubel Rusia</option>
+            <option>SEK - Krona Swedia</option>
+            <option>SGD - Dolar Singapura</option>
+            <option>THB - Baht Thailand</option>
+            <option>TRY - Lira Turki</option>
+            <option>USD - Dolar Amerika Serikat</option>
+            <option>ZAR - Rand Afrika Selatan</option>
+          </select>
         </div>
       </div>
 
