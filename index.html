@@ -101,6 +101,8 @@
               <li>
                 <a
                   href="#"
+                  data-modal-target="my-account-modal"
+                  data-modal-toggle="my-account-modal"
                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   >My Account</a
                 >
@@ -117,13 +119,13 @@
       <!-- hero section start -->
 
       <section
-        class="w-full max-h-screen min-w-[500px] sm:min-w-[640px] md:min-w-max lg:min-w-max xl:min-w-max font-Primary mt-1"
+        class="w-full max-h-full md:min-w-max lg:min-w-max xl:min-w-max font-Primary mt-1"
       >
         <div class="hero-img h-full lg:flex lg:flex-row lg:gap-2">
           <img
             src="dist/image/shoes.webp"
             alt="shoes.webp"
-            class="h-[565px] sm:h-full lg:h-[600px] w-full lg:w-3/5 xl:w-4/5 object-cover"
+            class="h-full w-full lg:w-3/5 xl:w-4/5 object-cover"
           />
           <div
             class="text-white lg:text-black p-5 -mt-36 sm:-mt-52 lg:mt-0 lg:py-36 lg:w-2/5 xl:w-1/5"
@@ -259,9 +261,7 @@
 
       <!-- section 4 start -->
 
-      <section
-        class="container max-h-screen mx-auto mt-200 sm:mt-16 px-4 pb-30"
-      >
+      <section class="container max-h-full mx-auto mt-200 sm:mt-16 px-4 pb-30">
         <div class="md:flex md:gap-4">
           <div class="md:w-1/2">
             <img
@@ -316,7 +316,6 @@
                 <a
                   class="hover:underline"
                   href="about.html"
-                  target="_blank"
                   rel="noopener noreferrer"
                   >Read more</a
                 >
@@ -508,16 +507,86 @@
           </select>
         </div>
       </div>
-
-      <!-- <div> -->
-
-      <!-- </div> -->
     </footer>
-
     <!-- footer end -->
+
+    <!-- modal start -->
+
+    <!-- My Account Modal -->
+    <div
+      id="my-account-modal"
+      data-modal-placement="top-right"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+              My Account
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="my-account-modal"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-6">
+            <p
+              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+            >
+              Create an account or login in to view your orders, return and
+              adjust your personal information
+            </p>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex justify-between p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+          >
+            <button
+              data-modal-hide="my-account-modal"
+              type="button"
+              class="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+            >
+              Create Account
+            </button>
+            <button
+              data-modal-hide="my-account-modal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- My Account Modal end -->
 
     <!-- script for flowbite -->
     <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
     <!-- end script for flowbite -->
+    <!-- script javascript -->
+    <script src="app.js"></script>
   </body>
 </html>
