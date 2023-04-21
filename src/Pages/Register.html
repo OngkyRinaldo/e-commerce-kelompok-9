@@ -124,15 +124,17 @@
             <div class="grid grid-cols-1">
               <a href="#" class="text-xl font-semibold pb-5">My cccount</a>
 
-              <a href="Login.html" class="text-sm hover:underline mt-10"
+              <a
+                href="Login.html"
+                class="text-sm hover:underline mt-3 md:mt-10 lg:mt-10"
                 >I already have an account</a
               >
             </div>
           </div>
-          <div class="lg:w-3/4 sm:w-3/4 md:w-3/4 px-2 pb-3">
+          <div class="w-full lg:w-3/4 md:w-full pb-3">
             <h2 class="text-xl font-semibold pb-5">Create Account</h2>
             <form
-              class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-2 md:gap-4 lg:gap-6 mt-10"
+              class="flex flex-col md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 md:gap-4 lg:gap-6 mt-3 md:mt-10 lg:mt-10"
             >
               <div class="mb-6">
                 <label
@@ -197,7 +199,7 @@
               <div class="mb-6">
                 <label
                   for="gender-group"
-                  class="block mb-4 text-sm font-normal text-gray-900 dark:text-white"
+                  class="block mb-4 mt-6 md:mt-0 lg:mt-0 text-sm font-normal text-gray-900 dark:text-white"
                   >Gender</label
                 >
                 <div class="flex justify-start items-center my-auto">
@@ -262,7 +264,9 @@
 
               <div class="col-span-2 border-t border-slate-300"></div>
 
-              <div class="flex items-center justify-between mb-6">
+              <div
+                class="md:flex-row lg:flex-row md:flex justify-start md:justify-between mb-6 sm:grid sm:grid-cols-1 sm:gap-1"
+              >
                 <div class="flex items-center">
                   <input
                     id="subscribe"
@@ -273,16 +277,16 @@
                   />
                   <label
                     for="subscribe"
-                    class="ml-2 text-sm font-normal text-gray-900 dark:text-gray-300"
+                    class="ml-2 mt-3 text-sm font-normal text-gray-900 dark:text-gray-300"
                   >
                     Subscribe to newsletter
                   </label>
                 </div>
               </div>
-              <div class="mb-6">
+              <div class="md:mt-0 lg:md-0 mt-3 mb-6">
                 <button
                   type="submit"
-                  class="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-600 font-normal text-sm px-16 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800 float-right"
+                  class="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-600 font-normal text-sm px-16 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800 float-left md:float-right"
                 >
                   Create Account
                 </button>
@@ -578,7 +582,8 @@
             >
               Create Account
             </a>
-            <a href="Login.html"
+            <a
+              href="Login.html"
               data-modal-hide="my-account-modal"
               type="button"
               class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-normal px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
