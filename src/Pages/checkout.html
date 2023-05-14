@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-commerce</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    /* ini untuk bantuan dalam membuat flayout/frame, nanti dihapus */
+    /* * {
+      border: 1px solid rgb(157, 253, 145);
+    } */
+  </style>
+  <body>
+    <!-- header start -->
+    <header class="sticky top-0 z-50 shadow-lg">
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a href="index.html" class="flex items-center">
+            <img
+              src="../img/Home/etq-amsterdam-logo-svg-vector.png"
+              class="h-8 mr-3"
+              alt="Logo"
+            />
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="AllProducts.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Shop All</a
+                >
+              </li>
+              <li>
+                <a
+                  href="NewIn.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >New In</a
+                >
+              </li>
+              <li>
+                <a
+                  href="SpringSale.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Spring Sale</a
+                >
+              </li>
+              <!-- search button manipulation -->
+              <li
+                id="search-trigger-li"
+                class="transition duration-500 ease-in-out"
+              >
+                <a
+                  href="#"
+                  id="search-trigger"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Search</a
+                >
+              </li>
+
+              <!-- search box start -->
+              <div
+                id="search"
+                class="hidden transition duration-500 ease-in-out"
+              >
+                <form class="flex items-center">
+                  <label for="simple-search" class="sr-only">Search</label>
+                  <div class="relative w-full">
+                    <div
+                      class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="w-3 h-3 text-gray-500 dark:text-gray-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      id="simple-search"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-slate-500 focus:border-slate-500 block w-full pl-10 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-slate-500 dark:focus:border-slate-500"
+                      placeholder="Search"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="p-1 ml-2 text-sm font-medium text-white bg-slate-700 rounded-lg border border-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </form>
+              </div>
+              <!-- search box end -->
+              <li>
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Help
+                  <svg
+                    class="w-5 h-5 ml-1"
+                    aria-hidden="true"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a
+                        href="overview.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Overview</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="sizeGuide.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Size Guide</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="faq.html"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >FAQ</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >Help</a
+                >
+              </li> -->
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  data-modal-target="my-account-modal"
+                  data-modal-toggle="my-account-modal"
+                  >My Account</a
+                >
+              </li>
+
+              <li id="cart">
+                <a href="#" class="">
+                  <span
+                    class="bg-slate-800 text-white text-sm font-medium px-2.5 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300"
+                    >7</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+      <!-- section help topics start -->
+      <section
+        id="checkout"
+        class="container max-h-full w-full min-w-full px-0.5 lg:px-12 mb-3 mt-2 lg:mt-10"
+      >
+        <h1
+          class="px-4 mb-3 text-lg font-bold text-gray-900 dark:text-white hidden lg:flex"
+        >
+          Your bag
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4">
+          <div class="col-span-1">
+            <div class="px-4 mx-auto pb-2 mb-2 lg:mb-6">
+              <a href="overview.html" class="lg:mb-6 text-base hover:underline"
+                >&#8592; Keep shopping</a
+              >
+            </div>
+          </div>
+          <div class="col-span-3">
+            <div class="relative overflow-x-auto mb-12">
+              <table
+                id="table-guide-size"
+                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-xs border-b-4 border-slate-800 text-gray-900 uppercase dark:text-gray-400"
+                >
+                  <tr>
+                    <th scope="col" class="px-1 py-4">Product</th>
+
+                    <th scope="col" class="px-1 py-4">Color</th>
+                    <th scope="col" class="px-1 py-4">Size</th>
+                    <th scope="col" class="px-1 py-4">QTY</th>
+                    <th scope="col" class="px-1 py-4"></th>
+                    <th scope="col" class="px-1 py-4 text-end">Price</th>
+                  </tr>
+                </thead>
+                <tbody class="text-slate-800">
+                  <tr
+                    class="bg-white dark:bg-gray-800 border-b border-slate-300 hover:bg-slate-200"
+                  >
+                    <th
+                      scope="row"
+                      class="px-1 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      <div
+                        class="flex items-start md:items-center justify-start"
+                      >
+                        <div class="flex flex-col">
+                          <img
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                            alt="item1"
+                            class="w-20 h-24 object-cover"
+                          />
+                          <div class="md:hidden">
+                            <select
+                              name="qty"
+                              id="qty"
+                              class="border-slate-200"
+                            >
+                              <script>
+                                for (let i = 1; i <= 100; i++) {
+                                  document.write(
+                                    '<option value="' +
+                                      i +
+                                      '">' +
+                                      i +
+                                      "</option>"
+                                  );
+                                }
+                              </script>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="flex flex-col pl-3 w-full">
+                          <h3
+                            class="font-semibold text-slate-800 font-lg mb-1 truncate"
+                          >
+                            Air Jordan 1 Mid Reverse Bred Kids
+                          </h3>
+                          <span
+                            class="text-slate-800 font-semibold text-normal mb-1 md:hidden"
+                          >
+                            $207</span
+                          >
+                          <span
+                            class="text-slate-600 font-normal mb-1 text-sm md:hidden"
+                          >
+                            Pri White</span
+                          >
+                          <span
+                            class="text-slate-600 font-normal mb-1 text-sm md:hidden"
+                          >
+                            EU 45| US 12| UK 11</span
+                          >
+                          <span class="flex item-center justify-end">
+                            <a
+                              href="#"
+                              class="border-b border-slate-800 hover:border-none md:hidden"
+                            >
+                              Delete
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="px-1 py-4">Pri White</td>
+                    <td class="px-1 py-4">EU 45| US 12| UK 11</td>
+                    <td class="px-0 py-2 md:py-4">
+                      <select name="qty" id="qty" class="border-slate-200">
+                        <script>
+                          for (let i = 1; i <= 100; i++) {
+                            document.write(
+                              '<option value="' + i + '">' + i + "</option>"
+                            );
+                          }
+                        </script>
+                      </select>
+                    </td>
+                    <td class="px-1 py-4">
+                      <a
+                        href="#"
+                        class="border-b border-slate-800 hover:border-none"
+                      >
+                        Delete
+                      </a>
+                    </td>
+                    <td class="px-1 py-4 text-end font-semibold">$207</td>
+                  </tr>
+                  <tr
+                    class="bg-white dark:bg-gray-800 border-b border-slate-300 hover:bg-slate-200"
+                  >
+                    <th
+                      scope="row"
+                      class="px-1 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      <div
+                        class="flex items-start md:items-center justify-start"
+                      >
+                        <div class="flex flex-col">
+                          <img
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                            alt="item1"
+                            class="w-20 h-24 object-cover"
+                          />
+                          <div class="md:hidden">
+                            <select
+                              name="qty"
+                              id="qty"
+                              class="border-slate-200"
+                            >
+                              <script>
+                                for (let i = 1; i <= 100; i++) {
+                                  document.write(
+                                    '<option value="' +
+                                      i +
+                                      '">' +
+                                      i +
+                                      "</option>"
+                                  );
+                                }
+                              </script>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="flex flex-col pl-3 w-full">
+                          <h3
+                            class="font-semibold text-slate-800 font-lg mb-1 truncate"
+                          >
+                            Air Jordan 1 Mid Reverse Bred Kids
+                          </h3>
+                          <span
+                            class="text-slate-800 font-semibold text-normal mb-1 md:hidden"
+                          >
+                            $207</span
+                          >
+                          <span
+                            class="text-slate-600 font-normal mb-1 text-sm md:hidden"
+                          >
+                            Pri White</span
+                          >
+                          <span
+                            class="text-slate-600 font-normal mb-1 text-sm md:hidden"
+                          >
+                            EU 45| US 12| UK 11</span
+                          >
+                          <span class="flex item-center justify-end">
+                            <a
+                              href="#"
+                              class="border-b border-slate-800 hover:border-none md:hidden"
+                            >
+                              Delete
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="px-1 py-4">Pri White</td>
+                    <td class="px-1 py-4">EU 45| US 12| UK 11</td>
+                    <td class="px-0 py-2 md:py-4">
+                      <select name="qty" id="qty" class="border-slate-200">
+                        <script>
+                          for (let i = 1; i <= 100; i++) {
+                            document.write(
+                              '<option value="' + i + '">' + i + "</option>"
+                            );
+                          }
+                        </script>
+                      </select>
+                    </td>
+                    <td class="px-1 py-4">
+                      <a
+                        href="#"
+                        class="border-b border-slate-800 hover:border-none"
+                      >
+                        Delete
+                      </a>
+                    </td>
+                    <td class="px-1 py-4 text-end font-semibold">$207</td>
+                  </tr>
+                  <tr
+                    class="bg-white dark:bg-gray-800 border-b border-slate-300 hover:bg-slate-200"
+                  >
+                    <th
+                      scope="row"
+                      class="px-1 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      <div
+                        class="flex items-start md:items-center justify-start"
+                      >
+                        <div class="flex flex-col">
+                          <img
+                            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                            alt="item1"
+                            class="w-20 h-24 object-cover"
+                          />
+                          <div class="md:hidden">
+                            <select
+                              name="qty"
+                              id="qty"
+                              class="border-slate-200"
+                            >
+                              <script>
+                                for (let i = 1; i <= 100; i++) {
+                                  document.write(
+                                    '<option value="' +
+                                      i +
+                                      '">' +
+                                      i +
+                                      "</option>"
+                                  );
+                                }
+                              </script>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="flex flex-col pl-3 w-full">
+                          <h3
+                            class="font-semibold text-slate-800 font-lg mb-1 truncate"
+                          >
+                            Air Jordan 1 Mid Reverse Bred Kids
+                          </h3>
+                          <span
+                            class="text-slate-800 font-semibold text-normal mb-1 md:hidden"
+                          >
+                            $207</span
+                          >
+                          <span
+                            class="text-slate-600 font-normal mb-1 text-sm md:hidden"
+                          >
+                            Pri White</span
+                          >
+                          <span
+                            class="text-slate-600 font-normal mb-1 text-sm md:hidden"
+                          >
+                            EU 45| US 12| UK 11</span
+                          >
+                          <span class="flex item-center justify-end">
+                            <a
+                              href="#"
+                              class="border-b border-slate-800 hover:border-none md:hidden"
+                            >
+                              Delete
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="px-1 py-4">Pri White</td>
+                    <td class="px-1 py-4">EU 45| US 12| UK 11</td>
+                    <td class="px-0 py-2 md:py-4">
+                      <select name="qty" id="qty" class="border-slate-200">
+                        <script>
+                          for (let i = 1; i <= 100; i++) {
+                            document.write(
+                              '<option value="' + i + '">' + i + "</option>"
+                            );
+                          }
+                        </script>
+                      </select>
+                    </td>
+                    <td class="px-1 py-4">
+                      <a
+                        href="#"
+                        class="border-b border-slate-800 hover:border-none"
+                      >
+                        Delete
+                      </a>
+                    </td>
+                    <td class="px-1 py-4 text-end font-semibold">$207</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div
+                class="flex items-center justify-between md:justify-end mt-2 mb-4"
+              >
+                <h3 class="md:mr-20 font-bold text-lg">Subtotal</h3>
+                <span class="ml-20 text-lg font-semibold">$1071</span>
+              </div>
+              <div class="flex items-center justify-center md:justify-end">
+                <a
+                  href="payment.html"
+                  class="bg-slate-900 text-white font-semibold text-base text-center py-3 w-full md:w-1/3 md:px-28 hover:opacity-75"
+                  >Checkout</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- accordion end -->
+      </section>
+      <!-- section hel topics end -->
+    </main>
+
+    <!-- main end -->
+
+    <!-- footer -->
+
+    <footer
+      class="bg-white container max-h-full mx-auto border-t border-black-300 mt-18 md:mt-28"
+    >
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="px-4 py-3 lg:py-6">
+            <div class="">
+              <h2
+                class="mb-3 text-sm font-bold text-gray-900 uppercase dark:text-white"
+              >
+                About
+              </h2>
+              <p class="text-sm text-justify">
+                We design wardrobe essentials with a strong silhouette, in tonal
+                colorways. Our style never changes. It evolves. Continuously.
+                <a
+                  class="hover:underline"
+                  href="about.html"
+                  rel="noopener noreferrer"
+                  >Read more</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="px-4 py-3 lg:py-6">
+            <div>
+              <h2
+                class="mb-3 text-sm font-bold text-gray-900 uppercase dark:text-white"
+                style="padding-top: 3px"
+              >
+                Address
+              </h2>
+              <p class="text-sm text-justify">
+                Duinkerkenstraat 3A 9723 BN Groningen The Netherland
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="px-4 py-3 lg:py-6">
+            <div>
+              <h2
+                class="mb-3 text-sm font-bold text-gray-900 uppercase dark:text-white"
+                style="padding-top: 3px"
+              >
+                Contact
+              </h2>
+              <p class="text-sm">
+                <a class="hover:underline" href="http://">Email us here</a>
+                <br />
+                <a
+                  class="hover:underline"
+                  href="http://"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >0854013553 (mon-fri)</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="px-4 py-3 lg:py-6">
+            <div>
+              <h2
+                class="mb-3 text-sm font-bold text-gray-900 uppercase dark:text-white"
+                style="padding-top: 3px"
+              >
+                Info
+              </h2>
+              <ul class="text-sm">
+                <li class="mb-1">
+                  <a href="#" class="hover:underline">Shipping</a>
+                </li>
+                <li class="mb-1">
+                  <a href="#" class="hover:underline">Wholesale</a>
+                </li>
+                <li class="mb-1">
+                  <a href="#" class="hover:underline">Product Care</a>
+                </li>
+                <li class="mb-1">
+                  <a href="#" class="hover:underline">Store Locator</a>
+                </li>
+                <li class="mb-1">
+                  <a href="#" class="hover:underline">Term of Service</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- batas about sampai info -->
+      <div class="md:grid md:grid-cols-2 md:gap-4">
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="grid grid-rows-2 px-4 py-3">
+            <div class="flex">
+              <form class="">
+                <label for="langganan" class="text-sm p-0 m-0">
+                  Join our newsletter.
+                </label>
+                <div class="flex">
+                  <input
+                    id="langganan"
+                    class="border-slate-200 shadow rounded w-full block mt-2"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                  <button
+                    type="button"
+                    class="bg-slate-200 font-semibold hover:uderline py-3 px-3 rounded-md mt-2 ml-4 border border-slate-600 hover:bg-slate-500"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="py-3">
+              <p class="text-slate-500 text-sm">
+                This site is protected by reCAPTCHA and the Google
+                <a class="hover:underline" href="http://">Privacy Policy </a>
+                and
+                <a class="hover:underline" href="http://"
+                  >Terms of Service apply.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto w-full max-w-screen-xl">
+          <div class="grid grid-rows-2 px-3 py-2 lg:flex md:content-justify">
+            <div class="flex py-2">
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/Footer/bca.png"
+                alt="bca"
+              />
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/Footer/bri.png"
+                alt="bri"
+              />
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/Footer/dana.png"
+                alt="dana"
+              />
+              <img
+                class="w-auto h-8 rounded-lg bg-slate-100 px-2 py-2 mr-2 md:mr-1"
+                src="/src/img/Footer/ovo.png"
+                alt="ovo"
+              />
+              <img
+                class="w-auto h-8 object-cover rounded-lg bg-slate-100 px-2 py-2 mr-2"
+                src="/src/img/Footer/google-pay.png"
+                alt="gpay"
+              />
+            </div>
+
+            <div class="py-3 border-t border-black-300">
+              <a class="text-sm text-slate-800 hover:underline" href="#"
+                >Term and condition.</a
+              >
+              <br />
+              <a class="text-sm text-slate-800 hover:underline" href="#"
+                >Privay statements.</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="px-4 py-3 mb-12 flex justify-center md:block md:justify-start"
+        >
+          <select class="bg-slate-200 hover:uderline py-3 px-3 rounded-md">
+            <option disabled selected>Pilih Mata Uang</option>
+            <option>AUD - Dolar Australia</option>
+            <option>BGN - Lev Bulgaria</option>
+            <option>BRL - Real Brasil</option>
+            <option>CAD - Dolar Kanada</option>
+            <option>CHF - Franc Swiss</option>
+            <option>CNY - Yuan China</option>
+            <option>EUR - Euro</option>
+            <option>GBP - Poundsterling Inggris</option>
+            <option>HKD - Dolar Hong Kong</option>
+            <option>IDR - Rupiah Indonesia</option>
+            <option>INR - Rupee India</option>
+            <option>JPY - Yen Jepang</option>
+            <option>KRW - Won Korea Selatan</option>
+            <option>MXN - Peso Meksiko</option>
+            <option>MYR - Ringgit Malaysia</option>
+            <option>NZD - Dolar New Zealand</option>
+            <option>PHP - Peso Filipina</option>
+            <option>PLN - Zloty Polandia</option>
+            <option>RUB - Rubel Rusia</option>
+            <option>SEK - Krona Swedia</option>
+            <option>SGD - Dolar Singapura</option>
+            <option>THB - Baht Thailand</option>
+            <option>TRY - Lira Turki</option>
+            <option>USD - Dolar Amerika Serikat</option>
+            <option>ZAR - Rand Afrika Selatan</option>
+          </select>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <!-- modal start -->
+
+    <!-- My Account Modal -->
+    <div
+      id="my-account-modal"
+      data-modal-placement="top-right"
+      tabindex="-1"
+      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+              My Account
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-hide="my-account-modal"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <div class="p-6 space-y-6">
+            <p
+              class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+            >
+              Create an account or login in to view your orders, return and
+              adjust your personal information
+            </p>
+          </div>
+          <!-- Modal footer -->
+          <div
+            class="flex justify-between p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+          >
+            <a
+              href="Register.html"
+              data-modal-hide="my-account-modal"
+              type="button"
+              class="text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+            >
+              Create Account
+            </a>
+            <a
+              href="Login.html"
+              data-modal-hide="my-account-modal"
+              type="button"
+              class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+            >
+              Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- My Account Modal end -->
+
+    <script src="/src/app.js"></script>
+    <!-- script for flowbite -->
+    <script src="/node_modules/flowbite/dist/flowbite.js"></script>
+    <!-- end script for flowbite -->
+  </body>
+</html>
